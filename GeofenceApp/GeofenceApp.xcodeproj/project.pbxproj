@@ -103,7 +103,7 @@
 		841E4B0326E6B4BC008AE610 /* GeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
-				841E4B3726E6BDB8008AE610 /* Model */,
+				841E4B3726E6BDB8008AE610 /* LocationManager */,
 				841E4B0426E6B4BC008AE610 /* AppDelegate.swift */,
 				841E4B0626E6B4BC008AE610 /* SceneDelegate.swift */,
 				841E4B0826E6B4BC008AE610 /* ViewController.swift */,
@@ -134,12 +134,12 @@
 			path = GeofenceAppUITests;
 			sourceTree = "<group>";
 		};
-		841E4B3726E6BDB8008AE610 /* Model */ = {
+		841E4B3726E6BDB8008AE610 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
 				841E4B3826E6BDDC008AE610 /* LocationManager.swift */,
 			);
-			path = Model;
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
