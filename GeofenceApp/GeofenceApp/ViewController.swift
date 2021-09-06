@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
+    private let map: MKMapView = {
+        let map = MKMapView()
+        return map
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.addSubview(map)
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        map.frame = view.bounds
+    }
 
 }
 
