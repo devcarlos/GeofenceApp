@@ -9,6 +9,9 @@ import CoreData
 import Foundation
 
 class CoreDataManager {
+    
+    static let shared = CoreDataManager()
+    
     private let container: NSPersistentContainer!
 
     init() {
@@ -27,7 +30,7 @@ class CoreDataManager {
         }
     }
 
-    func userHasEnter(name : String, latitude : Double, longitude : Double, hasEnter : Bool, completion: @escaping() -> Void) {
+    func userHasEnter(name : String, latitude : Double, longitude : Double, hasEnter : Bool) {
         
         let context = container.viewContext
 
@@ -40,7 +43,6 @@ class CoreDataManager {
         do {
             try context.save()
             print("User \(name) enter")
-            completion()
         } catch {
             print("Error — \(error)")
         }

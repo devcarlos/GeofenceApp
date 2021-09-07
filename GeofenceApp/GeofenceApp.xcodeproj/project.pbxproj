@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71C8EFE726E6E4F9003FCFFF /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				712452E826E6CAA30056BBC5 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
 		841E4AF826E6B4BC008AE610 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +115,7 @@
 		841E4B0326E6B4BC008AE610 /* GeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
+				71C8EFE726E6E4F9003FCFFF /* CoreDataManager */,
 				841E4B3A26E6D580008AE610 /* Constants */,
 				841E4B3726E6BDB8008AE610 /* LocationManager */,
 				841E4B0426E6B4BC008AE610 /* AppDelegate.swift */,
@@ -117,7 +126,6 @@
 				841E4B1226E6B4BE008AE610 /* LaunchScreen.storyboard */,
 				841E4B1526E6B4BE008AE610 /* Info.plist */,
 				841E4B0D26E6B4BC008AE610 /* GeofenceApp.xcdatamodeld */,
-				712452E826E6CAA30056BBC5 /* CoreDataManager.swift */,
 			);
 			path = GeofenceApp;
 			sourceTree = "<group>";

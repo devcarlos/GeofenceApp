@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         let mapView = MKMapView()
         return mapView
     }()
-
-    private let manager = CoreDataManager()
+    
+    var userName: String = "User Test"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +68,30 @@ extension ViewController: MKMapViewDelegate {
 
 extension ViewController: LocationManagerDelegate {
     func onEnterGeofence() {
-//        mapView.userLocation
+        let userLocation = mapView.userLocation
+        
+        CoreDataManager.shared.userHasEnter(name: userName, latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude, hasEnter: true)
+        userHasEnter()
     }
 
     func onExitGeofence() {
-//        mapView.userLocation
+        let userLocation = mapView.userLocation
+        
+        CoreDataManager.shared.userHasEnter(name: userName, latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude, hasEnter: false)
+        userHasExit()
+    }
+    
+    func userHasEnter() {
+        let title = NSLocalizedString("User Enter", comment: "")
+        let message = NSLocalizedString("", comment: "")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func userHasExit() {
+        let title = NSLocalizedString("User Exite", comment: "")
+        let message = NSLocalizedString("", comment: "")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
     }
 }
