@@ -38,16 +38,6 @@
                ReferencedContainer = "container:GeofenceApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "841E4B2426E6B4BE008AE610"
-               BuildableName = "GeofenceAppUITests.xctest"
-               BlueprintName = "GeofenceAppUITests"
-               ReferencedContainer = "container:GeofenceApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

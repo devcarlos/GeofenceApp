@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56E2A20A26E70AF000FD319A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3826E6BDDC008AE610 /* LocationManager.swift */; };
+		56E2A21426E70C0B00FD319A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3B26E6D5AE008AE610 /* Constants.swift */; };
 		712452E926E6CAA30056BBC5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712452E826E6CAA30056BBC5 /* CoreDataManager.swift */; };
 		841E4B0526E6B4BC008AE610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B0426E6B4BC008AE610 /* AppDelegate.swift */; };
 		841E4B0726E6B4BC008AE610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B0626E6B4BC008AE610 /* SceneDelegate.swift */; };
@@ -15,8 +17,7 @@
 		841E4B0F26E6B4BC008AE610 /* GeofenceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B0D26E6B4BC008AE610 /* GeofenceApp.xcdatamodeld */; };
 		841E4B1126E6B4BE008AE610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841E4B1026E6B4BE008AE610 /* Assets.xcassets */; };
 		841E4B1426E6B4BE008AE610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E4B1226E6B4BE008AE610 /* LaunchScreen.storyboard */; };
-		841E4B1F26E6B4BE008AE610 /* GeofenceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B1E26E6B4BE008AE610 /* GeofenceAppTests.swift */; };
-		841E4B2A26E6B4BE008AE610 /* GeofenceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B2926E6B4BE008AE610 /* GeofenceAppUITests.swift */; };
+		841E4B1F26E6B4BE008AE610 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B1E26E6B4BE008AE610 /* LocationManagerTests.swift */; };
 		841E4B3926E6BDDC008AE610 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3826E6BDDC008AE610 /* LocationManager.swift */; };
 		841E4B3C26E6D5AE008AE610 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3B26E6D5AE008AE610 /* Constants.swift */; };
 		84D95AEA26E6EC8600D223A7 /* Points.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 84D95AE926E6EC8600D223A7 /* Points.gpx */; };
@@ -25,13 +26,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		841E4B1B26E6B4BE008AE610 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 841E4AF926E6B4BC008AE610 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 841E4B0026E6B4BC008AE610;
-			remoteInfo = GeofenceApp;
-		};
-		841E4B2626E6B4BE008AE610 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 841E4AF926E6B4BC008AE610 /* Project object */;
 			proxyType = 1;
@@ -52,11 +46,8 @@
 		841E4B1326E6B4BE008AE610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841E4B1526E6B4BE008AE610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E4B1A26E6B4BE008AE610 /* GeofenceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		841E4B1E26E6B4BE008AE610 /* GeofenceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAppTests.swift; sourceTree = "<group>"; };
+		841E4B1E26E6B4BE008AE610 /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 		841E4B2026E6B4BE008AE610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		841E4B2526E6B4BE008AE610 /* GeofenceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		841E4B2926E6B4BE008AE610 /* GeofenceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAppUITests.swift; sourceTree = "<group>"; };
-		841E4B2B26E6B4BE008AE610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E4B3826E6BDDC008AE610 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		841E4B3B26E6D5AE008AE610 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84D95AE926E6EC8600D223A7 /* Points.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Points.gpx; sourceTree = "<group>"; };
@@ -72,13 +63,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		841E4B1726E6B4BE008AE610 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		841E4B2226E6B4BE008AE610 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,7 +85,6 @@
 			children = (
 				841E4B0326E6B4BC008AE610 /* GeofenceApp */,
 				841E4B1D26E6B4BE008AE610 /* GeofenceAppTests */,
-				841E4B2826E6B4BE008AE610 /* GeofenceAppUITests */,
 				841E4B0226E6B4BC008AE610 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +94,6 @@
 			children = (
 				841E4B0126E6B4BC008AE610 /* GeofenceApp.app */,
 				841E4B1A26E6B4BE008AE610 /* GeofenceAppTests.xctest */,
-				841E4B2526E6B4BE008AE610 /* GeofenceAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,8 +101,8 @@
 		841E4B0326E6B4BC008AE610 /* GeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
-				84D95AEB26E6EE7F00D223A7 /* Extension */,
 				841E4B1526E6B4BE008AE610 /* Info.plist */,
+				84D95AEB26E6EE7F00D223A7 /* Extension */,
 				84D95AE426E6EA9800D223A7 /* App */,
 				84D95AE726E6EAB700D223A7 /* Assets */,
 				841E4B3D26E6E4B9008AE610 /* GPX */,
@@ -137,19 +119,10 @@
 		841E4B1D26E6B4BE008AE610 /* GeofenceAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				841E4B1E26E6B4BE008AE610 /* GeofenceAppTests.swift */,
+				841E4B1E26E6B4BE008AE610 /* LocationManagerTests.swift */,
 				841E4B2026E6B4BE008AE610 /* Info.plist */,
 			);
 			path = GeofenceAppTests;
-			sourceTree = "<group>";
-		};
-		841E4B2826E6B4BE008AE610 /* GeofenceAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				841E4B2926E6B4BE008AE610 /* GeofenceAppUITests.swift */,
-				841E4B2B26E6B4BE008AE610 /* Info.plist */,
-			);
-			path = GeofenceAppUITests;
 			sourceTree = "<group>";
 		};
 		841E4B3726E6BDB8008AE610 /* LocationManager */ = {
@@ -264,24 +237,6 @@
 			productReference = 841E4B1A26E6B4BE008AE610 /* GeofenceAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		841E4B2426E6B4BE008AE610 /* GeofenceAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 841E4B3426E6B4BE008AE610 /* Build configuration list for PBXNativeTarget "GeofenceAppUITests" */;
-			buildPhases = (
-				841E4B2126E6B4BE008AE610 /* Sources */,
-				841E4B2226E6B4BE008AE610 /* Frameworks */,
-				841E4B2326E6B4BE008AE610 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				841E4B2726E6B4BE008AE610 /* PBXTargetDependency */,
-			);
-			name = GeofenceAppUITests;
-			productName = GeofenceAppUITests;
-			productReference = 841E4B2526E6B4BE008AE610 /* GeofenceAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,10 +250,6 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					841E4B1926E6B4BE008AE610 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 841E4B0026E6B4BC008AE610;
-					};
-					841E4B2426E6B4BE008AE610 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 841E4B0026E6B4BC008AE610;
 					};
@@ -319,7 +270,6 @@
 			targets = (
 				841E4B0026E6B4BC008AE610 /* GeofenceApp */,
 				841E4B1926E6B4BE008AE610 /* GeofenceAppTests */,
-				841E4B2426E6B4BE008AE610 /* GeofenceAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,13 +287,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		841E4B1826E6B4BE008AE610 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		841E4B2326E6B4BE008AE610 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,15 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841E4B1F26E6B4BE008AE610 /* GeofenceAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		841E4B2126E6B4BE008AE610 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				841E4B2A26E6B4BE008AE610 /* GeofenceAppUITests.swift in Sources */,
+				56E2A20A26E70AF000FD319A /* LocationManager.swift in Sources */,
+				841E4B1F26E6B4BE008AE610 /* LocationManagerTests.swift in Sources */,
+				56E2A21426E70C0B00FD319A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +328,6 @@
 			isa = PBXTargetDependency;
 			target = 841E4B0026E6B4BC008AE610 /* GeofenceApp */;
 			targetProxy = 841E4B1B26E6B4BE008AE610 /* PBXContainerItemProxy */;
-		};
-		841E4B2726E6B4BE008AE610 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 841E4B0026E6B4BC008AE610 /* GeofenceApp */;
-			targetProxy = 841E4B2626E6B4BE008AE610 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -617,46 +549,6 @@
 			};
 			name = Release;
 		};
-		841E4B3526E6B4BE008AE610 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3EEZTZLJLB;
-				INFOPLIST_FILE = GeofenceAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kurrentap.GeofenceAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GeofenceApp;
-			};
-			name = Debug;
-		};
-		841E4B3626E6B4BE008AE610 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3EEZTZLJLB;
-				INFOPLIST_FILE = GeofenceAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kurrentap.GeofenceAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GeofenceApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,15 +575,6 @@
 			buildConfigurations = (
 				841E4B3226E6B4BE008AE610 /* Debug */,
 				841E4B3326E6B4BE008AE610 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		841E4B3426E6B4BE008AE610 /* Build configuration list for PBXNativeTarget "GeofenceAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				841E4B3526E6B4BE008AE610 /* Debug */,
-				841E4B3626E6B4BE008AE610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

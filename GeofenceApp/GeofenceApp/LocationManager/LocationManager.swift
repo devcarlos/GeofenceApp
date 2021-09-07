@@ -25,6 +25,10 @@ class LocationManager: NSObject {
 
     weak var delegate: LocationManagerDelegate?
 
+    let geofenceRegionCenter = CLLocationCoordinate2DMake(latitude, longitude)
+
+    var geofenceRegion: CLCircularRegion?
+
     func setup(mapView: MKMapView) {
         self.mapView = mapView
     }
@@ -55,13 +59,17 @@ class LocationManager: NSObject {
             completion(name)
         }
     }
+
     func setupGeofence() {
         guard let mapView = self.mapView else {
             return
         }
 
-        let geofenceRegionCenter = CLLocationCoordinate2DMake(latitude, longitude)
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 400, identifier: "Geofence")
+        self.geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 400, identifier: "Geofence")
+
+        guard let geofenceRegion = geofenceRegion else {
+            return
+        }
         geofenceRegion.notifyOnExit = true
         geofenceRegion.notifyOnEntry = true
 
@@ -74,6 +82,14 @@ class LocationManager: NSObject {
         mapView.showsUserLocation = true;
 
         manager.startMonitoring(for: geofenceRegion)
+    }
+
+    func stopGeofenceMonitoring() {
+        guard let geofenceRegion = geofenceRegion else {
+            return
+        }
+        manager.stopMonitoring(for: geofenceRegion)
+        self.geofenceRegion = nil
     }
 }
 
