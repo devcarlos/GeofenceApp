@@ -14,7 +14,7 @@ protocol LocationManagerDelegate: AnyObject {
     func onExitGeofence()
 }
 
-class LocationManager: NSObject, CLLocationManagerDelegate {
+class LocationManager: NSObject {
     static let shared = LocationManager()
 
     let manager = CLLocationManager()
@@ -30,7 +30,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     public func getUserLocation(completion: @escaping ((CLLocation) -> Void)) {
-
         self.completion = completion
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
@@ -62,7 +61,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         }
 
         let geofenceRegionCenter = CLLocationCoordinate2DMake(latitude, longitude)
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 400, identifier: "OlivetChurch")
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 400, identifier: "Geofence")
         geofenceRegion.notifyOnExit = true
         geofenceRegion.notifyOnEntry = true
 
@@ -76,7 +75,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
         manager.startMonitoring(for: geofenceRegion)
     }
+}
 
+extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -100,5 +101,4 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             self.setupGeofence()
         }
     }
-
 }

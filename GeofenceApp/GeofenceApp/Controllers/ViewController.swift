@@ -5,16 +5,20 @@
 //  Created by Admin on 6/9/21.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
+    // MARK: - Properties
     private let mapView: MKMapView = {
         let mapView = MKMapView()
         return mapView
     }()
+    
+    var userName: String = "User Test"
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "HOME"
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
         LocationManager.shared.setup(mapView: mapView)
         LocationManager.shared.delegate = self
 
-        LocationManager.shared.getUserLocation(completion:  { [weak self ] location in
+        LocationManager.shared.getUserLocation(completion: { location in
             DispatchQueue.main.async {
                 LocationManager.shared.setupGeofence()
             }
@@ -48,10 +52,9 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - MKMapViewDelegate
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-
-        print("Arrive to mapView delegate")
         let overlayRenderer : MKCircleRenderer = MKCircleRenderer(overlay: overlay);
         overlayRenderer.lineWidth = 4.0
         overlayRenderer.strokeColor = UIColor.red
@@ -60,12 +63,29 @@ extension ViewController: MKMapViewDelegate {
     }
 }
 
+// MARK: - LocationManagerDelegate
 extension ViewController: LocationManagerDelegate {
     func onEnterGeofence() {
-//        mapView.userLocation
+        sendUserGeofence(hasEnter: true)
     }
 
     func onExitGeofence() {
-//        mapView.userLocation
+        sendUserGeofence(hasEnter: false)
+    }
+}
+
+private extension ViewController {
+    func sendUserGeofence(hasEnter: Bool) {
+        let userLocation = mapView.userLocation
+
+        CoreDataManager.shared.userHasEnter(name: userName,
+                                            latitude: userLocation.coordinate.latitude,
+                                            longitude: userLocation.coordinate.longitude,
+                                            hasEnter: hasEnter)
+
+        let title = hasEnter ? "User Enter" : "User Exit"
+        let message = "The user has \(hasEnter ? "enter" : "exit") the Geofence"
+
+        showAlertWithAutoDismiss(title: title, message: message, time: 1)
     }
 }
