@@ -18,6 +18,7 @@
 		841E4B2A26E6B4BE008AE610 /* GeofenceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B2926E6B4BE008AE610 /* GeofenceAppUITests.swift */; };
 		841E4B3926E6BDDC008AE610 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3826E6BDDC008AE610 /* LocationManager.swift */; };
 		841E4B3C26E6D5AE008AE610 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E4B3B26E6D5AE008AE610 /* Constants.swift */; };
+		841E4B3F26E6E4DC008AE610 /* Points.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 841E4B3E26E6E4DC008AE610 /* Points.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		841E4B2B26E6B4BE008AE610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E4B3826E6BDDC008AE610 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		841E4B3B26E6D5AE008AE610 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		841E4B3E26E6E4DC008AE610 /* Points.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Points.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		841E4B0326E6B4BC008AE610 /* GeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
+				841E4B3D26E6E4B9008AE610 /* GPX */,
 				841E4B3A26E6D580008AE610 /* Constants */,
 				841E4B3726E6BDB8008AE610 /* LocationManager */,
 				841E4B0426E6B4BC008AE610 /* AppDelegate.swift */,
@@ -151,6 +154,14 @@
 				841E4B3B26E6D5AE008AE610 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		841E4B3D26E6E4B9008AE610 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				841E4B3E26E6E4DC008AE610 /* Points.gpx */,
+			);
+			path = GPX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841E4B3F26E6E4DC008AE610 /* Points.gpx in Resources */,
 				841E4B1426E6B4BE008AE610 /* LaunchScreen.storyboard in Resources */,
 				841E4B1126E6B4BE008AE610 /* Assets.xcassets in Resources */,
 				841E4B0C26E6B4BC008AE610 /* Main.storyboard in Resources */,

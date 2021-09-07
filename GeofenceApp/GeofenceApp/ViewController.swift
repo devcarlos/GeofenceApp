@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "HOME"
+        mapView.delegate = self
         view.addSubview(mapView)
 
         LocationManager.shared.setup(mapView: mapView)
@@ -25,10 +26,6 @@ class ViewController: UIViewController {
 
         LocationManager.shared.getUserLocation(completion:  { [weak self ] location in
             DispatchQueue.main.async {
-                guard let strongSelf = self else {
-                    return
-                }
-                strongSelf.addMapPin(with: location)
                 LocationManager.shared.setupGeofence()
             }
         })
@@ -53,14 +50,13 @@ class ViewController: UIViewController {
 
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if let circleOverlay = overlay as? MKCircle {
-            let circleRenderer = MKCircleRenderer(overlay: circleOverlay)
-            circleRenderer.fillColor = .black
-            circleRenderer.alpha = 0.1
 
-            return circleRenderer
-        }
-        return MKOverlayRenderer()
+        print("Arrive to mapView delegate")
+        let overlayRenderer : MKCircleRenderer = MKCircleRenderer(overlay: overlay);
+        overlayRenderer.lineWidth = 4.0
+        overlayRenderer.strokeColor = UIColor.red
+        overlayRenderer.fillColor = UIColor.blue
+        return overlayRenderer
     }
 }
 
